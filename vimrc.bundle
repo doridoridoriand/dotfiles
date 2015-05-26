@@ -60,6 +60,9 @@ NeoBundle 'nginx.vim'                           " nginx.conf
 NeoBundle 'tpope/vim-markdown'                  " MarkDown
 NeoBundle 'joker1007/vim-markdown-quote-syntax' " MarkDown内のコードをハイライト
 NeoBundle 'yuroyoro/vim-python'                 " python
+NeoBundle 'derekwyatt/vim-scala'                " Scala
+NeoBundle 'fatih/vim-go'                        " GO
+NeoBundle 'slim-template/vim-slim'              " Slim
 NeoBundle 'scrooloose/syntastic'                " シンタックスチェック
 
 " Unite
