@@ -56,6 +56,8 @@ NeoBundle 'vim-jp/cpp-vim'                      " C++
 NeoBundle 'haml.zip'                            " Haml/Sass
 NeoBundle 'JavaScript-syntax'                   " JavaScript
 NeoBundle 'jQuery'                              " jQuery
+NeoBundle 'https://github.com/leafgarland/typescript-vim.git'   " TypeScript Syntax
+NeoBundle 'https://github.com/clausreinke/typescript-tools.git' " TypeScript 補完
 NeoBundle 'nginx.vim'                           " nginx.conf
 NeoBundle 'tpope/vim-markdown'                  " MarkDown
 NeoBundle 'joker1007/vim-markdown-quote-syntax' " MarkDown内のコードをハイライト
