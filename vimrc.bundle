@@ -57,7 +57,10 @@ NeoBundle 'haml.zip'                            " Haml/Sass
 NeoBundle 'JavaScript-syntax'                   " JavaScript
 NeoBundle 'jQuery'                              " jQuery
 NeoBundle 'https://github.com/leafgarland/typescript-vim.git'   " TypeScript Syntax
-NeoBundle 'https://github.com/clausreinke/typescript-tools.git' " TypeScript 補完
+NeoBundle 'Quramy/tsuquyomi'
+" NeoBundle 'https://github.com/clausreinke/typescript-tools.vim'
+" NeoBundle 'https://github.com/clausreinke/typescript-tools.git' " TypeScript 補完
+NeoBundle 'https://github.com/digitaltoad/vim-pug.git' " jadeテンプレートのハイライト
 NeoBundle 'nginx.vim'                           " nginx.conf
 NeoBundle 'tpope/vim-markdown'                  " MarkDown
 NeoBundle 'joker1007/vim-markdown-quote-syntax' " MarkDown内のコードをハイライト
@@ -83,7 +86,13 @@ NeoBundle 'vim-scripts/ruby-matchit'            " matchit(対応括弧への移�
 NeoBundle 'tpope/vim-rails'                     " Railsプロジェクト用
 NeoBundle 'vim-ruby/vim-ruby'                   " Rubyのシンタックスハイライト・スマートインデントなど
 
+" Dockerfile
+NeoBundle 'ekalinin/Dockerfile.vim'             " Dockerfile作成時のシンタックスハイライト
+
 call neobundle#end()
 filetype plugin indent on
 
 NeoBundleCheck
+
+autocmd BufNewFile,BufRead *.ts     set filetype=typescript
+autocmd BufNewFile,BufRead *.tsx    set filetype=typescript
