@@ -6,6 +6,9 @@
 - zsh
 
 ## Installation
+### zsh-completions
+`$ brew install zsh-completions`
+
 ### dotfiles
 ```sh
 cd

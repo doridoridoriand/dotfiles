@@ -102,3 +102,7 @@ eval "$(pyenv init -)"
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+if [ -e /usr/local/share/zsh-completions ]; then
+  fpath=(/usr/local/share/zsh-completions $fpath)
+fi
