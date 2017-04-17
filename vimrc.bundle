@@ -67,6 +67,7 @@ NeoBundle 'joker1007/vim-markdown-quote-syntax' " MarkDown内のコードをハ�
 NeoBundle 'yuroyoro/vim-python'                 " python
 NeoBundle 'derekwyatt/vim-scala'                " Scala
 NeoBundle 'fatih/vim-go'                        " GO
+NeoBundle 'elixir-lang/vim-elixir'              " Elixir
 NeoBundle 'slim-template/vim-slim'              " Slim
 NeoBundle 'scrooloose/syntastic'                " シンタックスチェック
 
