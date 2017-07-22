@@ -86,6 +86,11 @@ man() {
 }
 
 # その他
+
+# phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH"
 if [ -d "$HOME/.rbenv" ]; then
@@ -134,3 +139,8 @@ export PATH=$ANT_ROOT:$PATH
 export ANDROID_SDK_ROOT=/Users/dorian/Documents/android-sdk-macosx
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# OpenCV関連
+export PATH="/usr/local/opt/opencv3/bin:$PATH"
