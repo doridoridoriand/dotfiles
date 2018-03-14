@@ -85,6 +85,9 @@ man() {
         man "$@"
 }
 
+export PATH=$HOME/.rbenv/bin:$HOME/.phpenv/bin:$PATH
+eval "$(phpenv init -)"
+
 # その他
 
 # phpenv
@@ -144,3 +147,20 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # OpenCV関連
 export PATH="/usr/local/opt/opencv3/bin:$PATH"
+
+# GOPATH, GOROOT(Mac)
+export GOPATH=$HOME/go
+export GOROOT=$HOME/homebrew/opt/go/libexec
+
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$GOROOT/bin:$PATH"
+
+export CPPFLAGS="-I/usr/local/opt/qt5/include"
+export LDFLAGS="-L/usr/local/opt/qt5/lib"
+export PATH=/usr/local/opt/qt5/bin:$PATH
+
+
+#export PATH=$HOME/.rbenv/bin:$HOME/.phpenv/bin:$PATH
+#eval "$(phpenv init -)"
+
+export PATH="$HOME/.embulk/bin:$PATH"
