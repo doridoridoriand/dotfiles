@@ -10,6 +10,8 @@ set showmatch       " 対応括弧のハイライト
 set showmode        " 現在のモードをステータスラインに表示
 set title           " タイトルを表示
 
+set guifont=Ricty:h18
+
 " 全角スペースを強調
 augroup ZenkakuSpace
   autocmd!
