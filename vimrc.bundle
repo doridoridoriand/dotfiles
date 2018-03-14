@@ -54,8 +54,8 @@ NeoBundle 'w0ng/vim-hybrid'                     " Hybrid
 NeoBundle 'kchmck/vim-coffee-script'            " CoffeeScript
 NeoBundle 'vim-jp/cpp-vim'                      " C++
 NeoBundle 'haml.zip'                            " Haml/Sass
-NeoBundle 'JavaScript-syntax'                   " JavaScript
-NeoBundle 'jQuery'                              " jQuery
+" NeoBundle 'JavaScript-syntax'                   " JavaScript
+" NeoBundle 'jQuery'                              " jQuery
 NeoBundle 'https://github.com/leafgarland/typescript-vim.git'   " TypeScript Syntax
 NeoBundle 'Quramy/tsuquyomi'
 " NeoBundle 'https://github.com/clausreinke/typescript-tools.vim'
