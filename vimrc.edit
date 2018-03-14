@@ -13,5 +13,5 @@ set tabstop=2       " タブ文字の幅
 set autoindent                  " 前行のインデントを引き継ぐ
 set smartindent                 " インデントを適切に増減させる
 augroup vimrc
-  autocmd! FileType perl setlocal shiftwidth=4 tabstop=2 softtabstop=2
+  autocmd! FileType perl setlocal shiftwidth=2 tabstop=2 softtabstop=2
 augroup END
