@@ -54,11 +54,11 @@ NeoBundle 'w0ng/vim-hybrid'                     " Hybrid
 NeoBundle 'kchmck/vim-coffee-script'            " CoffeeScript
 NeoBundle 'vim-jp/cpp-vim'                      " C++
 NeoBundle 'haml.zip'                            " Haml/Sass
-" NeoBundle 'JavaScript-syntax'                   " JavaScript
+NeoBundle 'JavaScript-syntax'                   " JavaScript
 " NeoBundle 'jQuery'                              " jQuery
 NeoBundle 'https://github.com/leafgarland/typescript-vim.git'   " TypeScript Syntax
 NeoBundle 'Quramy/tsuquyomi'
-" NeoBundle 'https://github.com/clausreinke/typescript-tools.vim'
+NeoBundle 'https://github.com/clausreinke/typescript-tools.vim'
 " NeoBundle 'https://github.com/clausreinke/typescript-tools.git' " TypeScript 補完
 NeoBundle 'https://github.com/digitaltoad/vim-pug.git' " jadeテンプレートのハイライト
 NeoBundle 'nginx.vim'                           " nginx.conf
@@ -69,7 +69,7 @@ NeoBundle 'derekwyatt/vim-scala'                " Scala
 NeoBundle 'fatih/vim-go'                        " GO
 NeoBundle 'elixir-lang/vim-elixir'              " Elixir
 NeoBundle 'slim-template/vim-slim'              " Slim
-NeoBundle 'scrooloose/syntastic'                " シンタックスチェック
+" NeoBundle 'scrooloose/syntastic'                " シンタックスチェック
 
 " Unite
 NeoBundle 'Shougo/unite.vim'                    " 本体
