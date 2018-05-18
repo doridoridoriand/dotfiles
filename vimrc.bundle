@@ -7,10 +7,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " 編集
-NeoBundle 'Align'                               " テキスト整形
+" NeoBundle 'Align'                               " テキスト整形
 NeoBundle 'c9s/cascading.vim'                   " メソッドチェーン整形 (PHP/Perl/Ruby)
 NeoBundle 'eregex.vim'                          " 正規表現をRubyライクにする
-NeoBundle 'Shougo/neocomplcache.vim'            " 入力補完
+ NeoBundle 'Shougo/deoplete.nvim'
+" NeoBundle 'Shougo/neocomplcache.vim'            " 入力補完
 NeoBundle 'The-NERD-Commenter'                  " コメントアウトを簡単にする
 NeoBundle 'godlygeek/tabular'                   " テキスト整形
 NeoBundle 'yuroyoro/vim-autoclose'              " 閉じ括弧補完
@@ -58,7 +59,7 @@ NeoBundle 'JavaScript-syntax'                   " JavaScript
 " NeoBundle 'jQuery'                              " jQuery
 NeoBundle 'https://github.com/leafgarland/typescript-vim.git'   " TypeScript Syntax
 NeoBundle 'Quramy/tsuquyomi'
-NeoBundle 'https://github.com/clausreinke/typescript-tools.vim'
+" NeoBundle 'https://github.com/clausreinke/typescript-tools.vim'
 " NeoBundle 'https://github.com/clausreinke/typescript-tools.git' " TypeScript 補完
 NeoBundle 'https://github.com/digitaltoad/vim-pug.git' " jadeテンプレートのハイライト
 NeoBundle 'nginx.vim'                           " nginx.conf
