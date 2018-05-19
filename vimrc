@@ -2,7 +2,7 @@ set nocompatible  " vi互換にしない
 set backspace=indent,eol,start " vim8でバックスペースで削除を有効にする
 
 " Dein
-source ~/dotfiles/vimrc.plugins
+source ~/dotfiles/vimrc.dein
 
 " 基本設定
 source ~/dotfiles/vimrc.general
