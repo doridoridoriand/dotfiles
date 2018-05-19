@@ -26,11 +26,11 @@ bindkey '^F' forward-word
 bindkey '^B' backward-word
 
 # プロンプト
-PROMPT="%{${fg[yellow]}%}%/%{${reset_color}%} "
-PROMPT2="%{${fg[yellow]}%}%_%{${reset_color}%} "
+PROMPT="%{${fg[cyan]}%}%/%{${reset_color}%} "
+PROMPT2="%{${fg[cyan]}%}%_%{${reset_color}%} "
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 RPROMPT="%1(v|%F{green}%1v%f|)"
-[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[cyan]}%}%n@${HOST%%.*} ${PROMPT}"
+[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[green]}%}%n@${HOST%%.*} ${PROMPT}"
 
 # 補完
 autoload -U compinit; compinit  # 補完機能を有効にする

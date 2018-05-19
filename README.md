@@ -1,4 +1,4 @@
-# My dotfiles for Mac (Not Runnable on CentOS and Ubuntu)
+# My dotfiles
 ## Targets
 - git
 - tmux
@@ -19,5 +19,3 @@ cd dotfiles
 ./setup.sh
 ```
 
-## Remarks
-Ricty(リクティ)というフォントが入っていないとtmuxのステータスラインが文字化けするので注意。
