@@ -24,5 +24,11 @@ if has('vim_starting') && dein#check_install()
 	call dein#install()
 endif
 
+" Set pligins directory
+let s:toml_dir = expand('~/dotfiles/dein')
+
+" Load plugins tomlfile
+call dein#load_toml(s:toml_dir . '/plugins.toml', {'lazy': 0})
+
 filetype plugin indent on
 syntax enable
