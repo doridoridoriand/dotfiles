@@ -1,7 +1,8 @@
 set nocompatible  " vi互換にしない
+set backspace=indent,eol,start " vim8でバックスペースで削除を有効にする
 
-" NeoBundle
-source ~/dotfiles/vimrc.bundle
+" Dein
+source ~/dotfiles/vimrc.dein
 
 " 基本設定
 source ~/dotfiles/vimrc.general
