@@ -1,0 +1,17 @@
+" vimを開いたら自動でNERDTreeが開くようにする
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" NERDTreeに表示しない拡張子を指定
+let g:NERDTreeIgnore = ['\.git$', '\.swp$', '\~$', '\.keep$']  " 表示しないファイルを指定
+
+" その他細々したNERDTreeの設定
+let g:NERDTreeDirArrows  = 0  " グラフィカルに表示しない
+let g:NERDTreeMinimalUI  = 0  " ブックマークやヘルプのショートカットを表示しない
+let g:NERDTreeShowHidden = 1  " 隠しファイルを表示する
+
+" control + e でNERDTreeの表示/非表示を切り替える
+nmap <silent> <C-e>      :NERDTreeToggle<CR>
+vmap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
+omap <silent> <C-e>      :NERDTreeToggle<CR>
+imap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
+cmap <silent> <C-e> <C-u>:NERDTreeToggle<CR>
