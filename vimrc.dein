@@ -5,11 +5,20 @@ endif
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
+" Set pligins directory
+let s:toml_dir = expand('~/dotfiles/dein')
+
 if dein#load_state('~/.cache/dein')
  call dein#begin('~/.cache/dein')
 
+ " Load plugins tomlfile
+ call dein#load_toml(s:toml_dir . '/plugins.toml', {'lazy': 0})
+
  call dein#add('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
+
+ call dein#add('scrooloose/nerdtree')
+
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
    call dein#add('roxma/vim-hug-neovim-rpc')
@@ -21,14 +30,8 @@ endif
 
 " Install plugins if you add later
 if has('vim_starting') && dein#check_install()
-	call dein#install()
+ call dein#install()
 endif
-
-" Set pligins directory
-let s:toml_dir = expand('~/dotfiles/dein')
-
-" Load plugins tomlfile
-call dein#load_toml(s:toml_dir . '/plugins.toml', {'lazy': 0})
 
 filetype plugin indent on
 syntax enable
