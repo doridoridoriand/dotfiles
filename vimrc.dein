@@ -19,5 +19,10 @@ if dein#load_state('~/.cache/dein')
  call dein#save_state()
 endif
 
+" Install plugins if you add later
+if has('vim_starting') && dein#check_install()
+	call dein#install()
+endif
+
 filetype plugin indent on
 syntax enable
