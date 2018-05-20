@@ -2,4 +2,12 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+# 入れるとか入れないとかそういう類の物では無い
 repo = 'scrooloose/nerdtree'
+repo = 'tpope/vim-fugitive'
+repo = 'bling/vim-airline'
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+# colorschemeをアドホックに
+repo = 'ujihisa/unite-colorscheme'

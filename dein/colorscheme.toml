@@ -1,0 +1,3 @@
+[[plugins]]
+repo = 'tomasr/molokai'
+repo = 'w0ng/vim-hybrid'
