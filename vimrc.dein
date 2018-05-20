@@ -12,7 +12,8 @@ if dein#load_state('~/.cache/dein')
  call dein#begin('~/.cache/dein')
 
  " Load plugins tomlfile
- call dein#load_toml(s:toml_dir . '/plugins.toml', {'lazy': 0})
+ call dein#load_toml(s:toml_dir . '/plugins.toml',     {'lazy': 0})
+ call dein#load_toml(s:toml_dir . '/colorscheme.toml', {'lazy': 0})
 
  call dein#add('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
