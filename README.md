@@ -2,7 +2,7 @@
 ## Targets
 - git
 - tmux
-- vim
+- vim (>= 8.x)
 - zsh
 
 ## Installation
@@ -13,8 +13,6 @@
 ```sh
 cd
 git clone https://github.com/doridoridoriand/dotfiles.git
-mkdir -p ~/dotfiles/vim/bundle
-git clone https://github.com/Shougo/neobundle.vim ~/dotfiles/vim/bundle/neobundle.vim
 cd dotfiles
 ./setup.sh
 ```
