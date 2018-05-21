@@ -11,3 +11,8 @@ repo = 'Shougo/unite.vim'
 [[plugins]]
 # colorschemeをアドホックに
 repo = 'ujihisa/unite-colorscheme'
+repo = 'fatih/vim-go'
+on_ft = ['go']
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['md', 'markdown']
+repo = 'elixir-lang/vim-elixir'
