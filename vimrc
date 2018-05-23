@@ -1,5 +1,5 @@
 set nocompatible  " vi互換にしない
-set backspace=indent,eol,start " vim8でバックスペースで削除を有効にする
+set backspace=indent,eol,start " バックスペースで削除を有効にする
 
 " Dein
 source ~/dotfiles/vimrc.dein
