@@ -11,13 +11,15 @@ repo = 'Shougo/unite.vim'
 [[plugins]]
 # colorschemeをアドホックに
 repo = 'ujihisa/unite-colorscheme'
+
+[[plugins]]
+# syntax highligh関連
 repo = 'fatih/vim-go'
 on_ft = ['go']
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['md', 'markdown']
 repo = 'elixir-lang/vim-elixir'
-# 最後のendやカッコを勝手に付けてくれるやつ
-repo = 'alpaca-tc/vim-endwise'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter' # 編集の差分表示をしてくれる
+repo = 'alpaca-tc/vim-endwise' # 最後のendやカッコを勝手に付けてくれるやつ
