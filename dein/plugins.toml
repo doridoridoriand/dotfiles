@@ -20,6 +20,9 @@ repo = 'rcmdnk/vim-markdown'
 on_ft = ['md', 'markdown']
 repo = 'elixir-lang/vim-elixir'
 
+
 [[plugins]]
-repo = 'airblade/vim-gitgutter' # 編集の差分表示をしてくれる
-repo = 'alpaca-tc/vim-endwise' # 最後のendやカッコを勝手に付けてくれるやつ
+repo = 'airblade/vim-gitgutter'        # 編集の差分表示をしてくれる
+repo = 'alpaca-tc/vim-endwise'         # 最後のendやカッコを勝手に付けてくれるやつ
+repo = 'godlygeek/tabular'             # イコールの位置を揃えたい時とかに使うやつ
+repo = 'banyan/recognize_charcode.vim' # 文字コードの自動認識
