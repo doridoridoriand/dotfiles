@@ -5,6 +5,9 @@ do
   rm -f ~/.$rc && ln -s ~/dotfiles/$rc ~/.$rc
 done
 
+mkdir -p ~/.vim/pack/git-plugins/start
+git clone https://github.com/w0rp/ale.git ~/.vim/pack/git-plugins/start/ale
+
 rm -f ~/.vimshrc && ln -s ~/dotfiles/zshrc.alias ~/.vimshrc
 
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
