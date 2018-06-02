@@ -1,3 +1,6 @@
 [[plugins]]
+# カラースキーマ
+repo = 'nanotech/jellybeans.vim'
+repo = 'shelling/railscasts.vim'
 repo = 'tomasr/molokai'
 repo = 'w0ng/vim-hybrid'
