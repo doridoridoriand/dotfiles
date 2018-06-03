@@ -30,3 +30,10 @@ repo = 'godlygeek/tabular'             # イコールの位置を揃えたい時
 repo = 'banyan/recognize_charcode.vim' # 文字コードの自動認識
 repo = 'thinca/vim-quickrun'           # vim内部でプログラム実行
 repo = 'vim-scripts/YankRing.vim'      # ヤンクの履歴を参照可能にする
+
+[[plugins]]
+# カラースキーマ
+repo = 'nanotech/jellybeans.vim'
+repo = 'shelling/railscasts.vim'
+repo = 'tomasr/molokai'
+repo = 'w0ng/vim-hybrid'

@@ -13,7 +13,6 @@ if dein#load_state('~/.cache/dein')
 
  " Load plugins tomlfile
  call dein#load_toml(s:toml_dir . '/plugins.toml',     {'lazy': 0})
- "call dein#load_toml(s:toml_dir . '/colorscheme.toml', {'lazy': 0})
 
  " Lazy load plugins
  call dein#load_toml(s:toml_dir . '/plugins.lazy.toml', {'lazy': 1})
@@ -22,8 +21,6 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
 
  call dein#add('scrooloose/nerdtree')
-
- call dein#add('~/.cache/vim-colorschemes/colors')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
