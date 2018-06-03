@@ -2,38 +2,78 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-# 入れるとか入れないとかそういう類の物では無い
 repo = 'scrooloose/nerdtree'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'bling/vim-airline'
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
-# colorschemeをアドホックに
-repo = 'ujihisa/unite-colorscheme'
+repo = 'ujihisa/unite-colorscheme' # カラースキーマをアドホックに変えたい
 
 [[plugins]]
-# syntax highligh関連
 repo = 'fatih/vim-go'
 on_ft = ['go']
-repo = 'rcmdnk/vim-markdown'
-on_ft = ['md', 'markdown']
-repo = 'elixir-lang/vim-elixir'
-
 
 [[plugins]]
-# 便利プラグインとか
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['md', 'markdown']
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+
+[[plugins]]
+repo = 'yuroyoro/vim-python'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'chr4/nginx.vim'
+
+[[plugins]]
+repo = 'StanAngeloff/php.vim'
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+
+[[plugins]]
 repo = 'w0rp/ale'                      # syntaxチェックをしてくれる(対応言語めっちゃ大量)
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'        # 編集の差分表示をしてくれる
+
+[[plugins]]
 repo = 'alpaca-tc/vim-endwise'         # 最後のendやカッコを勝手に付けてくれるやつ
+
+[[plugins]]
 repo = 'godlygeek/tabular'             # イコールの位置を揃えたい時とかに使うやつ
+
+[[plugins]]
 repo = 'banyan/recognize_charcode.vim' # 文字コードの自動認識
+
+[[plugins]]
 repo = 'thinca/vim-quickrun'           # vim内部でプログラム実行
+
+[[plugins]]
 repo = 'vim-scripts/YankRing.vim'      # ヤンクの履歴を参照可能にする
 
 [[plugins]]
-# カラースキーマ
 repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
 repo = 'shelling/railscasts.vim'
+
+[[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
 repo = 'w0ng/vim-hybrid'
