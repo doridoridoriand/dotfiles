@@ -26,3 +26,12 @@ repo = 'StanAngeloff/php.vim'
 
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'chase/vim-ansible-yaml'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
