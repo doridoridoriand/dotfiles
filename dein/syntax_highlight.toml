@@ -1,0 +1,37 @@
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['md', 'markdown']
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+
+[[plugins]]
+repo = 'yuroyoro/vim-python'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'chr4/nginx.vim'
+
+[[plugins]]
+repo = 'StanAngeloff/php.vim'
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'chase/vim-ansible-yaml'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'

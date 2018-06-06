@@ -17,35 +17,6 @@ repo = 'Shougo/unite.vim'
 repo = 'ujihisa/unite-colorscheme' # カラースキーマをアドホックに変えたい
 
 [[plugins]]
-repo = 'fatih/vim-go'
-on_ft = ['go']
-
-[[plugins]]
-repo = 'rcmdnk/vim-markdown'
-on_ft = ['md', 'markdown']
-
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-
-[[plugins]]
-repo = 'yuroyoro/vim-python'
-
-[[plugins]]
-repo = 'vim-jp/cpp-vim'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'chr4/nginx.vim'
-
-[[plugins]]
-repo = 'StanAngeloff/php.vim'
-
-[[plugins]]
-repo = 'ekalinin/Dockerfile.vim'
-
-[[plugins]]
 repo = 'w0rp/ale'                      # syntaxチェックをしてくれる(対応言語めっちゃ大量)
 
 [[plugins]]
@@ -65,15 +36,3 @@ repo = 'thinca/vim-quickrun'           # vim内部でプログラム実行
 
 [[plugins]]
 repo = 'vim-scripts/YankRing.vim'      # ヤンクの履歴を参照可能にする
-
-[[plugins]]
-repo = 'nanotech/jellybeans.vim'
-
-[[plugins]]
-repo = 'shelling/railscasts.vim'
-
-[[plugins]]
-repo = 'tomasr/molokai'
-
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
