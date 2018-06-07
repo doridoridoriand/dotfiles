@@ -35,3 +35,6 @@ repo = 'chase/vim-ansible-yaml'
 
 [[plugins]]
 repo = 'udalov/kotlin-vim'
+
+[[plugins]]
+repo = 'fgsch/vim-varnish'
