@@ -38,7 +38,3 @@ repo = 'udalov/kotlin-vim'
 
 [[plugins]]
 repo = 'fgsch/vim-varnish'
-
-[[plugins]]
-# 複数言語のsyntaxチェックしてくれるやつ:
-repo = 'vim-syntastic/syntastic'
