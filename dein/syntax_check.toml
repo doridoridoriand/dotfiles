@@ -1,0 +1,5 @@
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'

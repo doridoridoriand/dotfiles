@@ -15,6 +15,7 @@ if dein#load_state('~/.cache/dein')
  call dein#load_toml(s:toml_dir . '/plugins.toml',          {'lazy': 0})
  call dein#load_toml(s:toml_dir . '/colorscheme.toml',      {'lazy': 0})
  call dein#load_toml(s:toml_dir . '/syntax_highlight.toml', {'lazy': 0})
+ call dein#load_toml(s:toml_dir . '/syntax_check.toml',     {'lazy': 0})
 
  " Lazy load plugins
  call dein#load_toml(s:toml_dir . '/plugins.lazy.toml', {'lazy': 1})
