@@ -38,3 +38,6 @@ repo = 'udalov/kotlin-vim'
 
 [[plugins]]
 repo = 'fgsch/vim-varnish'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
