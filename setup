@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # 既にあれば削除して再度張り直す
 for rc in gemrc gitconfig screenrc tmux.conf tmux-powerlinerc zshrc vim vimrc
@@ -19,6 +19,12 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/tokuhirom/plenv.git ~/.plenv
+
+# tmuxとMacのクリップボードを共有できるようにする
+uname=`uname -s`;
+if [[ $uname -eq "Darwin" ]]; then
+  brew install reattach-to-user-namespace
+fi
 
 # tmux powerline
 rm -rf ~/dotfiles/tmux/tmux-powerline
