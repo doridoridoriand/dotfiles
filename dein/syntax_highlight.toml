@@ -17,12 +17,14 @@ repo = 'vim-jp/cpp-vim'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript', 'ts']
 
 [[plugins]]
 repo = 'chr4/nginx.vim'
 
 [[plugins]]
 repo = 'StanAngeloff/php.vim'
+on_ft = ['php']
 
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
