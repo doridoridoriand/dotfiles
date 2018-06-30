@@ -26,12 +26,19 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
 
 " deopleteの設定
 let g:deoplete#enable_at_startup = 1
 
-" チェッカーの選択
+" チェッカーの選択(syntastic)
+" 一旦最低限の部分
+" サポートしているチェッカーはここを確認
+" https://github.com/vim-syntastic/syntastic/tree/master/syntax_checkers
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_php_checkers    = ['php', 'phpcs', 'phpmd']
+let g:syntastic_ruby_checkers   = ['rubocop']
+
+" チェッカーの選択(ale)
+let g:ale_fix_on_save = 1
