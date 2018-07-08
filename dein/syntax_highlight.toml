@@ -11,6 +11,7 @@ repo = 'elixir-lang/vim-elixir'
 
 [[plugins]]
 repo = 'yuroyoro/vim-python'
+on_ft = ['python', 'py']
 
 [[plugins]]
 repo = 'vim-jp/cpp-vim'
@@ -31,6 +32,7 @@ repo = 'ekalinin/Dockerfile.vim'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+on_ft = ['toml']
 
 [[plugins]]
 repo = 'chase/vim-ansible-yaml'
