@@ -164,3 +164,7 @@ export PATH=/usr/local/opt/qt5/bin:$PATH
 #eval "$(phpenv init -)"
 
 export PATH="$HOME/.embulk/bin:$PATH"
+
+# luaver (lua version manager)
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+
