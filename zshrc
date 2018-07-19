@@ -168,3 +168,5 @@ export PATH="$HOME/.embulk/bin:$PATH"
 # luaver (lua version manager)
 [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
 
+# Rust
+source $HOME/.cargo/env
