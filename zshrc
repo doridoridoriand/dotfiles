@@ -169,4 +169,4 @@ export PATH="$HOME/.embulk/bin:$PATH"
 [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
 
 # Rust
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
