@@ -36,7 +36,7 @@ let g:deoplete#enable_at_startup = 1
 " 一旦最低限の部分
 " サポートしているチェッカーはここを確認
 " https://github.com/vim-syntastic/syntastic/tree/master/syntax_checkers
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_php_checkers    = ['php', 'phpcs', 'phpmd']
 let g:syntastic_ruby_checkers   = ['rubocop']
 
