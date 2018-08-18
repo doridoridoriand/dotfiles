@@ -10,10 +10,6 @@ on_ft = ['md', 'markdown']
 repo = 'elixir-lang/vim-elixir'
 
 [[plugins]]
-repo = 'hdima/python-syntax'
-on_ft = ['python', 'py']
-
-[[plugins]]
 repo = 'vim-jp/cpp-vim'
 
 [[plugins]]

@@ -15,8 +15,6 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.cache/dein
 
 # pernv + rbenv
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/tokuhirom/plenv.git ~/.plenv
 
