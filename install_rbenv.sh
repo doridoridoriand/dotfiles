@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 osName=`uname -s`;
+# 値が1だったらCentOS 0だったらUbuntu
+linuxDistoribution=`ls /etc/ | grep redhat | wc -l`
 
 if [[ $osName -eq "Darwin" ]]; then
   brew update;
@@ -8,14 +10,14 @@ if [[ $osName -eq "Darwin" ]]; then
   brew install rbenv ruby-build;
 fi
 
-if [[ $uname -eq "Ubuntu" ]]; then
+if [[ $linuxDistoribution -eq 0 ]]; then
   sudo apt-get update
   sudo apt-get -y install git curl g++ make
   sudo apt-get -y install zlib1g-dev libssl-dev libreadline-dev
   sudo apt-get -y install libyaml-dev libxml2-dev libxslt-dev
 fi
 
-if [[ $uname -eq "Centos" ]]; then
+if [[ $linuxDistoribution -eq 1 ]]; then
   sudo yum install -y git gcc gcc-c++ openssl-devel readline-devel
 fi
 
