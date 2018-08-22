@@ -17,7 +17,7 @@ repo = 'Shougo/unite.vim'
 repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
-repo = 'ujihisa/unite-colorscheme' # カラースキーマをアドホックに変えたい
+repo = 'ujihisa/unite-colorscheme'     # カラースキーマをアドホックに変えたい
 
 [[plugins]]
 repo = 'w0rp/ale'                      # syntaxチェックをしてくれる(対応言語めっちゃ大量)
@@ -39,3 +39,6 @@ repo = 'thinca/vim-quickrun'           # vim内部でプログラム実行
 
 [[plugins]]
 repo = 'vim-scripts/YankRing.vim'      # ヤンクの履歴を参照可能にする
+
+[[plugins]]
+repo = 'pocke/sushibar.vim'            # 寿司を流す
