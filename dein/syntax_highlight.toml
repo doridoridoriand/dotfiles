@@ -3,7 +3,7 @@ repo = 'fatih/vim-go'
 on_ft = ['go']
 
 [[plugins]]
-repo = 'rcmdnk/vim-markdown'
+repo = 'plasticboy/vim-markdown'
 on_ft = ['md', 'markdown']
 
 [[plugins]]
