@@ -41,3 +41,7 @@ repo = 'fgsch/vim-varnish'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
+
+[[plugins]]
+repo = 'uarun/vim-protobuf'
+on_ft = ['proto']
