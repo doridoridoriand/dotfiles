@@ -118,31 +118,6 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/dorian/cocos2d-x-3.12/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/dorian
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/dorian/cocos2d-x-3.12/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
-# Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/Users/dorian/Documents/android-ndk-r10e
-export PATH=$NDK_ROOT:$PATH
-
-# Add environment variable ANT_ROOT for cocos2d-x
-export ANT_ROOT=/Users/dorian/Documents/apache-ant-1.9.6/bin
-export PATH=$ANT_ROOT:$PATH
-
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/dorian/Documents/android-sdk-macosx
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # OpenCV関連
