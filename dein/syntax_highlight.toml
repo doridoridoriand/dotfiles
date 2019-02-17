@@ -45,3 +45,9 @@ repo = 'pangloss/vim-javascript'
 [[plugins]]
 repo = 'uarun/vim-protobuf'
 on_ft = ['proto']
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+
+[[plugins]]
+repo = 'vim-scripts/vim-terraform'
