@@ -9,3 +9,4 @@ set background=dark
 colorscheme hybrid                 " カラースキーマを指定
 syntax on                          " シンタックスハイライトを有効にする
 set encoding=utf-8                 " デフォルトのエンコーディング
+set verbosefile=/tmp/vim.log       " ログ出力
