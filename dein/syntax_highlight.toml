@@ -48,6 +48,3 @@ on_ft = ['proto']
 
 [[plugins]]
 repo = 'hashivim/vim-terraform'
-
-[[plugins]]
-repo = 'vim-scripts/vim-terraform'
