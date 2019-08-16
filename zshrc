@@ -199,4 +199,6 @@ case ${OSTYPE} in
     ;;
 esac
 
+# Flutter
+export PATH="$PATH:$HOME/flutter/bin"
 # つーかzshrcきったね
