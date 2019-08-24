@@ -199,5 +199,6 @@ export PATH="$PATH:$HOME/flutter/bin"
 
 # エイリアス読み込み
 source ~/dotfiles/zshrc.alias
+source ~/dotfiles/zshrc.completion
 
 # つーかzshrcきったね
