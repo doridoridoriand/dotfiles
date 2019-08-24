@@ -62,14 +62,12 @@ setopt inc_append_history   # 履歴をインクリメンタルに追加
 setopt hist_ignore_space    # スペースで始まるコマンド行はヒストリリストから削除
 setopt hist_verify          # ヒストリを呼び出してから実行する間に一旦編集可能
 autoload history-search-end
+
 # 履歴検索機能のショートカット
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-
-# エイリアス
-source ~/dotfiles/zshrc.alias
 
 # manコマンドに色をつける
 export MANPAGER='less -R'
@@ -139,10 +137,6 @@ export CPPFLAGS="-I/usr/local/opt/qt5/include"
 export LDFLAGS="-L/usr/local/opt/qt5/lib"
 export PATH=/usr/local/opt/qt5/bin:$PATH
 
-
-#export PATH=$HOME/.rbenv/bin:$HOME/.phpenv/bin:$PATH
-#eval "$(phpenv init -)"
-
 export PATH="$HOME/.embulk/bin:$PATH"
 
 # luaver (lua version manager)
@@ -201,4 +195,9 @@ esac
 
 # Flutter
 export PATH="$PATH:$HOME/flutter/bin"
+
+
+# エイリアス読み込み
+source ~/dotfiles/zshrc.alias
+
 # つーかzshrcきったね
