@@ -48,3 +48,6 @@ on_ft = ['proto']
 
 [[plugins]]
 repo = 'hashivim/vim-terraform'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
