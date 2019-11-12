@@ -1,13 +1,7 @@
-# 基本設定
-# export TERM=xterm-256color
-export EDITOR=vim           # エディタをvimに設定
-export LANG=ja_JP.UTF-8     # 文字コードをUTF-8に設定
-setopt no_beep              # ビープ音を鳴らさないようにする
-setopt auto_cd              # ディレクトリ名と一致した場合にcd
-setopt auto_pushd           # cd時にディレクトリスタックにpushd
-autoload -U colors; colors  # 色を使用できるようにする
-setopt prompt_subst         # プロンプトに式展開を適用
-export LSCOLORS=gxfxcxdxbxegedabagacad  # lsの色設定
+#  設定読み込み
+source ~/dotfiles/zshrc.basic_config
+source ~/dotfiles/zshrc.alias
+source ~/dotfiles/zshrc.completion
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
@@ -19,35 +13,12 @@ precmd () {
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
-# キーバインド
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line
-bindkey '^F' forward-word
-bindkey '^B' backward-word
-
 # プロンプト
 PROMPT="%{${fg[cyan]}%}%/%{${reset_color}%} "
 PROMPT2="%{${fg[cyan]}%}%_%{${reset_color}%} "
 SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 RPROMPT="%1(v|%F{green}%1v%f|)"
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[green]}%}%n@${HOST%%.*} ${PROMPT}"
-
-# 補完
-autoload -U compinit; compinit  # 補完機能を有効にする
-setopt auto_list                # 補完候補を一覧で表示する
-setopt auto_menu                # 補完キー連打で補完候補を順に表示する
-setopt auto_param_keys          # 括弧などを自動的に補完
-setopt auto_param_slash         # ディレクトリの補完時に末尾に/を付加
-setopt complete_aliases         # エイリアスを設定したコマンドにも補完機能を適用
-setopt correct                  # コマンドを修正
-setopt correct_all              # コマンドだけでなくファイル名等も修正
-setopt hist_expand              # 補完時にヒストリを展開
-setopt list_packed              # 補完候補を詰めて表示する
-setopt list_types               # 補完候補にファイルの種類も表示する
-setopt magic_equal_subst        # =以降も補完する
-setopt mark_dirs                # 補完対象がディレクトリの場合末尾に/を付加
-setopt nolistbeep               # 補完表示時にビープ音を鳴らさない
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 大文字小文字を区別しない
 
 # 履歴
 HISTFILE=~/.zsh_history
@@ -195,10 +166,5 @@ esac
 
 # Flutter
 export PATH="$PATH:$HOME/flutter/bin"
-
-
-# エイリアス読み込み
-source ~/dotfiles/zshrc.alias
-source ~/dotfiles/zshrc.completion
 
 # つーかzshrcきったね
