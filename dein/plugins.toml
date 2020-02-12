@@ -44,4 +44,7 @@ repo = 'thinca/vim-quickrun'           # vim内部でプログラム実行
 repo = 'vim-scripts/YankRing.vim'      # ヤンクの履歴を参照可能にする
 
 [[plugins]]
+repo = 'google/vim-maktaba'            # bazelプラグインで必要だったのでインストール
+
+[[plugins]]
 repo = 'pocke/sushibar.vim'            # 寿司を流す

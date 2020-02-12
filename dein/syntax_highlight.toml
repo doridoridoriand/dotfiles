@@ -51,3 +51,6 @@ repo = 'hashivim/vim-terraform'
 
 [[plugins]]
 repo = 'dart-lang/dart-vim-plugin'
+
+[[plugins]]
+repo = 'bazelbuild/vim-bazel'
