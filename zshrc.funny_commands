@@ -1,0 +1,2 @@
+alias tenki='() { curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Tokyo}" }'
+alias neko='nyancat'
