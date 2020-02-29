@@ -28,3 +28,6 @@ alias docker-rm-all='sudo docker ps -aq | xargs sudo docker rm'
 
 # Kubernetes
 alias k='kubectl'
+
+# Multipass
+alias mlp='multipass'
