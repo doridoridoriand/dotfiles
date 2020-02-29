@@ -1,6 +1,7 @@
 #  設定読み込み
 source ~/dotfiles/zshrc.basic_config
 source ~/dotfiles/zshrc.alias
+source ~/dotfiles/zshrc.funny_commands
 source ~/dotfiles/zshrc.completion
 
 # VCSのブランチ名をプロンプトに表示
