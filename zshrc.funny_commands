@@ -1,2 +1,6 @@
-alias tenki='() { curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Tokyo}" }'
+alias tenki='() { curl -s -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Tokyo}" }'
+alias tenki-rainbow='() { curl -s -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Tokyo}" | lolcat -t}'
 alias neko='nyancat'
+
+# asciinema
+alias rokuga='asciinema'
