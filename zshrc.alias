@@ -31,3 +31,6 @@ alias k='kubectl'
 
 # Multipass
 alias mlp='multipass'
+
+# ops
+alias myip='curl -s https://ipinfo.io/ip'
