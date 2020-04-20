@@ -2,19 +2,19 @@ set nocompatible  " vi互換にしない
 set backspace=indent,eol,start " バックスペースで削除を有効にする
 
 " Dein
-source ~/dotfiles/vimrc.dein
+source ~/dotfiles/vim_config/vimrc.dein
 
 " 基本設定
-source ~/dotfiles/vimrc.general
+source ~/dotfiles/vim_config/vimrc.general
 
 " 表示
-source ~/dotfiles/vimrc.appearance
+source ~/dotfiles/vim_config/vimrc.appearance
 
 " 編集
-source ~/dotfiles/vimrc.edit
+source ~/dotfiles/vim_config/vimrc.edit
 
 " 検索
-source ~/dotfiles/vimrc.search
+source ~/dotfiles/vim_config/vimrc.search
 
 " プラグイン設定
-source ~/dotfiles/vimrc.plugins_setting
+source ~/dotfiles/vim_config/vimrc.plugins_setting
