@@ -3,6 +3,7 @@ source ~/dotfiles/zshrc.basic_config
 source ~/dotfiles/zshrc.alias
 source ~/dotfiles/zshrc.funny_commands
 source ~/dotfiles/zshrc.completion
+source ~/dotfiles/zshrc.completion_kubernetes
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
