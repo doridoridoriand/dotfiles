@@ -1,2 +1,11 @@
 [[plugins]]
 repo = 'mattn/vim-starwars' # :StarWars
+
+[[plugins]]
+repo = 'c9s/helper.vim'     # for VKube
+
+[[plugins]]
+repo = 'c9s/treemenu.vim'   # for VKube
+
+[[plugins]]
+repo = 'c9s/vikube.vim'     # for VKube
