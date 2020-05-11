@@ -14,6 +14,17 @@ rm -f ~/.vimshrc && ln -s ~/dotfiles/zshrc.alias ~/.vimshrc
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 
+which rustup
+if [ $? = 0 ]; then
+  rustup toolchain add nightly
+fi
+
+which cargo
+if [ $? = 0 ]; then
+  cargo +nightly install racer
+fi
+
+
 # pyenv + plenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/tokuhirom/plenv.git ~/.plenv
