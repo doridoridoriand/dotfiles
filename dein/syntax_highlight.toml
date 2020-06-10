@@ -54,3 +54,6 @@ repo = 'dart-lang/dart-vim-plugin'
 
 [[plugins]]
 repo = 'bazelbuild/vim-bazel'
+
+[[plugins]]
+repo = 'nikvdp/ejs-syntax'
