@@ -75,10 +75,9 @@ if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
   source ~/perl5/perlbrew/etc/bashrc
 fi
 
-# tmux powerline にカレントディレクトリを表示するために必要
-export PYENV_ROOT=~/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 export PATH=$HOME/.nodebrew/current/bin:$PATH
