@@ -57,3 +57,6 @@ repo = 'bazelbuild/vim-bazel'
 
 [[plugins]]
 repo = 'nikvdp/ejs-syntax'
+
+[[plugins]]
+repo = 'posva/vim-vue'
