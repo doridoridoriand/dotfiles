@@ -56,11 +56,6 @@ man() {
         man "$@"
 }
 
-export PATH=$HOME/.rbenv/bin:$HOME/.phpenv/bin:$PATH
-eval "$(phpenv init -)"
-
-# その他
-
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
@@ -71,13 +66,11 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+eval "$(pyenv init --path)"
+
 if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
   source ~/perl5/perlbrew/etc/bashrc
 fi
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -116,43 +109,6 @@ export PATH="$HOME/.embulk/bin:$PATH"
 
 # Rust
 # source $HOME/.cargo/env
-
-# HomeBrewでpyenvをインストールした時に以下の警告が出てきたので、一旦opensshとreadlineに関してはパスを読み込むような設定をしておく
-#################
-# ==> openssl
-# A CA file has been bootstrapped using certificates from the SystemRoots
-# keychain. To add additional certificates (e.g. the certificates added in
-# the System keychain), place .pem files in
-#   /usr/local/etc/openssl/certs
-# 
-# and run
-#   /usr/local/opt/openssl/bin/c_rehash
-# 
-# openssl is keg-only, which means it was not symlinked into /usr/local,
-# because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
-# 
-# If you need to have openssl first in your PATH run:
-#   echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
-# 
-# For compilers to find openssl you may need to set:
-#   export LDFLAGS="-L/usr/local/opt/openssl/lib"
-#   export CPPFLAGS="-I/usr/local/opt/openssl/include"
-# 
-# For pkg-config to find openssl you may need to set:
-#   export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-# 
-# ==> readline
-# readline is keg-only, which means it was not symlinked into /usr/local,
-# because macOS provides the BSD libedit library, which shadows libreadline.
-# In order to prevent conflicts when programs look for libreadline we are
-# defaulting this GNU Readline installation to keg-only.
-# 
-# For compilers to find readline you may need to set:
-#   export LDFLAGS="-L/usr/local/opt/readline/lib"
-#   export CPPFLAGS="-I/usr/local/opt/readline/include"
-# 
-# For pkg-config to find readline you may need to set:
-#   export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
 case ${OSTYPE} in
   darwin*)
