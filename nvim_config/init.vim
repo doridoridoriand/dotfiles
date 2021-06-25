@@ -17,9 +17,6 @@ set verbosefile=/tmp/nvim.log       " ログ出力
 " Dein
 source ~/dotfiles/nvim_config/dein.vim
 
-" 基本設定
-source ~/dotfiles/nvim_config/general
-
 " 表示
 source ~/dotfiles/nvim_config/appearance.vim
 
@@ -30,4 +27,4 @@ source ~/dotfiles/nvim_config/edit.vim
 source ~/dotfiles/nvim_config/search.vim
 
 " プラグイン設定
-source ~/dotfiles/nvim_config/plugins_settings.vim
+source ~/dotfiles/nvim_config/plugin_settings.vim
