@@ -6,6 +6,9 @@ do
   rm -f ~/.$rc && ln -s ~/dotfiles/$rc ~/.$rc
 done
 
+mkdir -p ~/.config/nvim
+ln -s ~/dotfiles/nvim_config/init.vim ~/.config/nvim/init.vim
+
 mkdir -p ~/.vim/pack/git-plugins/start
 git clone https://github.com/w0rp/ale.git ~/.vim/pack/git-plugins/start/ale
 
