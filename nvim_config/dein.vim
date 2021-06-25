@@ -21,11 +21,6 @@ if dein#load_state('~/.cache/dein')
  call dein#load_toml(s:toml_dir . '/plugins.lazy.toml', {'lazy': 1})
 
  call dein#add('~/.cache/dein')
- if !has('nvim')
-   call dein#add('roxma/nvim-yarp')
-   call dein#add('roxma/vim-hug-neovim-rpc')
- endif
-
  call dein#end()
  call dein#save_state()
 endif
