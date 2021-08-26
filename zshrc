@@ -124,4 +124,26 @@ esac
 # Flutter
 export PATH="$PATH:$HOME/flutter/bin"
 
+# asdf
+. $HOME/.asdf/asdf.sh
+
 # つーかzshrcきったね
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/a14184/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/a14184/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/a14184/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/a14184/google-cloud-sdk/completion.zsh.inc'; fi
+
+case ${OSTYPE} in
+  darwin*)
+    export PATH="/usr/local/opt/mysql-client/bin:$PATH";
+    export LDFLAGS="-L/usr/local/opt/mysql-client/lib";
+    export CPPFLAGS="-I/usr/local/opt/mysql-client/include";
+    export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig";
+    ;;
+  linux*)
+    ;;
+esac
+
+export PATH=“/usr/local/opt/mysql-client/bin:$PATH”’ >> ~/.zshrc
