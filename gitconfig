@@ -17,3 +17,5 @@
 [user]
   name = doridoridoriand
   email = i.am.eager.for.peace@gmail.com
+[core]
+	quotepath = false
