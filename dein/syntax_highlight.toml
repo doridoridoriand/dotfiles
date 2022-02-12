@@ -60,3 +60,6 @@ repo = 'nikvdp/ejs-syntax'
 
 [[plugins]]
 repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'tomlion/vim-solidity'
