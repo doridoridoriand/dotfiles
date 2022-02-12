@@ -66,6 +66,7 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 
 if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
