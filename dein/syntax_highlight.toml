@@ -63,3 +63,6 @@ repo = 'posva/vim-vue'
 
 [[plugins]]
 repo = 'tomlion/vim-solidity'
+
+[[plugins]]
+repo = 'vim-python/python-syntax'
