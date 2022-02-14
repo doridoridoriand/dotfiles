@@ -45,3 +45,6 @@ let g:ale_fix_on_save = 1
 
 " Vim Markdownの折りたたみの挙動が煩わしいので無効化
 let g:vim_markdown_folding_disabled = 1
+
+" Pythonのハイライトが弱いのでプラグイン入れた
+let g:python_highlight_all = 1
