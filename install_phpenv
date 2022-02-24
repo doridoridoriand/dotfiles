@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 git clone https://github.com/CHH/phpenv.git
 cd phpenv/bin
