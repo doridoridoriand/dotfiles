@@ -12,7 +12,7 @@ fi
 if [[ $osName = "Linux" ]]; then
 
 # 値が1だったらCentOS 0だったらUbuntu
-linuxDistoribution=`ls /etc/ | grep redhat | wc -l`
+linuxDistoribution=`cat /proc/version | grep "Red Hat" | wc -l`;
 
 if [[ $linuxDistoribution -eq 0 ]]; then
     sudo apt-get update;
