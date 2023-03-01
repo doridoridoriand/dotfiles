@@ -32,10 +32,11 @@ fi
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/tokuhirom/plenv.git ~/.plenv
 
-# tmuxとMacのクリップボードを共有できるようにする
 uname=`uname -s`;
 if [[ $uname -eq "Darwin" ]]; then
   brew install reattach-to-user-namespace
+  # Linux系のOSでインストールできるようにしておきたい
+  brew install kube-ps1
 fi
 
 # tmux powerline
