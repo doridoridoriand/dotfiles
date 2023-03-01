@@ -3,7 +3,7 @@ source ~/dotfiles/zshrc.basic_config
 source ~/dotfiles/zshrc.alias
 source ~/dotfiles/zshrc.funny_commands
 source ~/dotfiles/zshrc.completion
-source ~/dotfiles/zshrc.completion_kubernetes
+source <(kubectl completion zsh)
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
@@ -148,3 +148,6 @@ case ${OSTYPE} in
 esac
 
 export PATH=“/usr/local/opt/mysql-client/bin:$PATH”’ >> ~/.zshrc
+
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
