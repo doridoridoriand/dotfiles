@@ -12,7 +12,7 @@ set scrolloff=5                    " スクロール時の前後行の余白
 set t_Co=256                       " 256色に対応
 set vb t_vb=                       " ヒープ音を鳴らさない
 set background=dark
-colorscheme hybrid                 " カラースキーマを指定
+colorscheme molokai                 " カラースキーマを指定
 syntax on                          " シンタックスハイライトを有効にする
 set encoding=utf-8                 " デフォルトのエンコーディング
 set verbosefile=/tmp/nvim.log       " ログ出力
