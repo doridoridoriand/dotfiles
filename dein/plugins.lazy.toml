@@ -9,3 +9,8 @@ repo = 'c9s/treemenu.vim'   # for VKube
 
 [[plugins]]
 repo = 'c9s/vikube.vim'     # for VKube
+
+[[plugins]]
+repo = "puremourning/vimspector"
+on_ft = ["python", "ruby", "go"]
+build = "./install_gadget.py --enable-python --enable-ruby --enable-go --update-gadget-config"
