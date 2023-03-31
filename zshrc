@@ -4,6 +4,7 @@ source ~/dotfiles/zshrc.alias
 source ~/dotfiles/zshrc.funny_commands
 source ~/dotfiles/zshrc.completion
 source <(kubectl completion zsh)
+source ~/dotfiles/zshrc.cycloud
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
@@ -88,15 +89,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/opt/opencv3/bin:$PATH"
 
 # GOPATH, GOROOT(Mac)
-export GOPATH=$HOME/go
-export GOROOT=$HOME/homebrew/opt/go/libexec
-
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$GOROOT/bin:$PATH"
-
-# goenv
+export GOPATH="$HOME/go"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
+export GOENV_DISABLE_GOPATH=1
 eval "$(goenv init -)"
 
 export CPPFLAGS="-I/usr/local/opt/qt5/include"
