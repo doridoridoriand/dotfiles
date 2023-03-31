@@ -48,3 +48,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " Pythonのハイライトが弱いのでプラグイン入れた
 let g:python_highlight_all = 1
+
+" viminspectorの設定
+let g:vimspector_enable_mappings = 'HUMAN'
