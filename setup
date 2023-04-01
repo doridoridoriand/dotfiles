@@ -35,8 +35,8 @@ git clone https://github.com/tokuhirom/plenv.git ~/.plenv
 uname=`uname -s`;
 if [[ $uname -eq "Darwin" ]]; then
   brew install reattach-to-user-namespace
-  # Linux系のOSでインストールできるようにしておきたい
   brew install kube-ps1
+  brew install peco
 fi
 
 # tmux powerline
