@@ -1,9 +1,10 @@
 #  設定読み込み
 source ~/dotfiles/zshrc.basic_config
 source ~/dotfiles/zshrc.alias
-source ~/dotfiles/zshrc.funny_commands
 source ~/dotfiles/zshrc.completion
+source ~/dotfiles/zshrc.extra_commands
 source <(kubectl completion zsh)
+source ~/dotfiles/zshrc.kubebuilder
 source ~/dotfiles/zshrc.cycloud
 
 # VCSのブランチ名をプロンプトに表示
@@ -127,10 +128,10 @@ export PATH="$PATH:$HOME/flutter/bin"
 # つーかzshrcきったね
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/a14184/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/a14184/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/a14184/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/a14184/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~//google-cloud-sdk/completion.zsh.inc'; fi
 
 case ${OSTYPE} in
   darwin*)
