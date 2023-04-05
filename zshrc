@@ -128,10 +128,10 @@ export PATH="$PATH:$HOME/flutter/bin"
 # つーかzshrcきったね
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~//google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 case ${OSTYPE} in
   darwin*)
@@ -146,5 +146,5 @@ esac
 
 export PATH=“/usr/local/opt/mysql-client/bin:$PATH”’ >> ~/.zshrc
 
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
