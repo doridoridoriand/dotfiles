@@ -18,4 +18,6 @@
   name = doridoridoriand
   email = i.am.eager.for.peace@gmail.com
 [core]
-	quotepath = false
+  quotepath = false
+[url "git@github.com:"]
+    insteadOf = https://github.com/
