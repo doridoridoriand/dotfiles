@@ -14,7 +14,7 @@ git clone https://github.com/w0rp/ale.git ~/.vim/pack/git-plugins/start/ale
 
 rm -f ~/.vimshrc && ln -s ~/dotfiles/zshrc.alias ~/.vimshrc
 
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+curl https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 
 which rustup
