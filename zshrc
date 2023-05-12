@@ -5,6 +5,7 @@ source ~/dotfiles/zshrc.completion
 source ~/dotfiles/zshrc.extra_commands
 source <(kubectl completion zsh)
 source ~/dotfiles/zshrc.kubebuilder
+source ~/dotfiles/zshrc.cycloud
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
@@ -142,7 +143,7 @@ case ${OSTYPE} in
     ;;
 esac
 
-export PATH=“/usr/local/opt/mysql-client/bin:$PATH”’ >> ~/.zshrc
+export PATH="/usr/local/opt/mysql-client/bin:$PATH" >> ~/.zshrc
 
 source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
