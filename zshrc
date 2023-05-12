@@ -99,11 +99,6 @@ export CPPFLAGS="-I/usr/local/opt/qt5/include"
 export LDFLAGS="-L/usr/local/opt/qt5/lib"
 export PATH=/usr/local/opt/qt5/bin:$PATH
 
-export PATH="$HOME/.embulk/bin:$PATH"
-
-# luaver (lua version manager)
-# [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
-
 # Rust
 # source $HOME/.cargo/env
 
