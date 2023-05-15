@@ -90,6 +90,7 @@ export PATH="/usr/local/opt/opencv3/bin:$PATH"
 
 # GOPATH, GOROOT(Mac)
 export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 export GOENV_DISABLE_GOPATH=1
@@ -98,11 +99,6 @@ eval "$(goenv init -)"
 export CPPFLAGS="-I/usr/local/opt/qt5/include"
 export LDFLAGS="-L/usr/local/opt/qt5/lib"
 export PATH=/usr/local/opt/qt5/bin:$PATH
-
-export PATH="$HOME/.embulk/bin:$PATH"
-
-# luaver (lua version manager)
-# [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
 
 # Rust
 # source $HOME/.cargo/env
@@ -117,9 +113,6 @@ case ${OSTYPE} in
     # そのうちOSごとに読み込むの切り替えたい
     ;;
 esac
-
-# Flutter
-export PATH="$PATH:$HOME/flutter/bin"
 
 # asdf
 . $HOME/.asdf/asdf.sh
