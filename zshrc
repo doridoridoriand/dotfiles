@@ -90,6 +90,7 @@ export PATH="/usr/local/opt/opencv3/bin:$PATH"
 
 # GOPATH, GOROOT(Mac)
 export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 export GOENV_DISABLE_GOPATH=1
