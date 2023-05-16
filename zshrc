@@ -2,10 +2,10 @@
 source ~/dotfiles/zshrc.basic_config
 source ~/dotfiles/zshrc.alias
 source ~/dotfiles/zshrc.completion
-source ~/dotfiles/zshrc.extra_commands
+source ~/dotfiles/zshrc.extra.commands
 source <(kubectl completion zsh)
 source ~/dotfiles/zshrc.kubebuilder
-source ~/dotfiles/zshrc.cycloud
+source ~/dotfiles-extra/zshrc.cycloud
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
