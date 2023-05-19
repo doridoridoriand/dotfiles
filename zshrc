@@ -143,3 +143,6 @@ source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
