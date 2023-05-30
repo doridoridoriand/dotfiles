@@ -142,7 +142,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/a14184/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/a14184/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/a14184/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/a14184/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
