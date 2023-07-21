@@ -25,6 +25,7 @@ alias ansible-playbook='ansible-playbook -vv --diff'
 # Docker
 alias docker-stop-all='sudo docker ps -q | xargs sudo docker stop'
 alias docker-rm-all='sudo docker ps -aq | xargs sudo docker rm'
+alias docker-rmi-all='sudo docker rmi $(sudo docker images --format "{{.Repository}}:{{.Tag}}")'
 
 # Kubernetes
 alias k='kubectl'
