@@ -51,3 +51,6 @@ let g:python_highlight_all = 1
 
 " viminspectorの設定
 let g:vimspector_enable_mappings = 'HUMAN'
+
+" copilot
+let g:copilot#enabled = 1
