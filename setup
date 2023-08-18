@@ -32,6 +32,10 @@ fi
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/tokuhirom/plenv.git ~/.plenv
 
+# pipx
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+
 uname=`uname -s`;
 if [[ $uname -eq "Darwin" ]]; then
   brew install reattach-to-user-namespace
