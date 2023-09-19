@@ -5,9 +5,10 @@ autocmd vimenter * if !argc() | NERDTree | endif
 let g:NERDTreeIgnore = ['\.git$', '\.swp$', '\~$', '\.keep$']  " 表示しないファイルを指定
 
 " その他細々したNERDTreeの設定
-let g:NERDTreeDirArrows  = 0  " グラフィカルに表示しない
-let g:NERDTreeMinimalUI  = 0  " ブックマークやヘルプのショートカットを表示しない
-let g:NERDTreeShowHidden = 1  " 隠しファイルを表示する
+let g:NERDTreeDirArrows  = 0    " グラフィカルに表示
+let g:NERDTreeMinimalUI  = 0    " ブックマークやヘルプのショートカットを表示しない
+let g:NERDTreeShowHidden = 1    " 隠しファイルを表示する
+set guifont=HackNFM-Regular:h14 " NERDTreeのフォントを変更
 
 " control + e でNERDTreeの表示/非表示を切り替える
 nmap <silent> <C-e>      :NERDTreeToggle<CR>
