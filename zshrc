@@ -103,7 +103,8 @@ export LDFLAGS="-L/usr/local/opt/qt5/lib"
 export PATH=/usr/local/opt/qt5/bin:$PATH
 
 # Rust
-# source $HOME/.cargo/env
+#source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
 
 case ${OSTYPE} in
   darwin*)
