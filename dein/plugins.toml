@@ -51,3 +51,7 @@ repo = 'pocke/sushibar.vim'            # 寿司を流す
 
 [[plugins]]
 repo = 'github/copilot.vim'            # GitHub Copilot
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'         # LSP
+
