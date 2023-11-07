@@ -28,8 +28,9 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 
 # 履歴
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=1000000
+
 setopt hist_ignore_dups     # 連続して重複したコマンドラインはヒストリに追加しない
 setopt share_history        # 履歴の共有
 setopt hist_no_store        # historyコマンドをhistoryに保存しない
@@ -103,7 +104,8 @@ export LDFLAGS="-L/usr/local/opt/qt5/lib"
 export PATH=/usr/local/opt/qt5/bin:$PATH
 
 # Rust
-# source $HOME/.cargo/env
+#source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
 
 case ${OSTYPE} in
   darwin*)
@@ -147,3 +149,5 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+export PATH="$PATH:$HOME/flutter/bin"

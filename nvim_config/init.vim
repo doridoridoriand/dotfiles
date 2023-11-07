@@ -28,3 +28,4 @@ source ~/dotfiles/nvim_config/search.vim
 
 " プラグイン設定
 source ~/dotfiles/nvim_config/plugin_settings.vim
+
