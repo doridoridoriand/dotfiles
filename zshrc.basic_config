@@ -2,6 +2,7 @@
 export TERM=xterm-256color
 export EDITOR=vim           # エディタをvimに設定
 export LANG=ja_JP.UTF-8     # 文字コードをUTF-8に設定
+export LC_CTYPE=ja_JP.UTF-8
 setopt no_beep              # ビープ音を鳴らさないようにする
 setopt auto_cd              # ディレクトリ名と一致した場合にcd
 setopt auto_pushd           # cd時にディレクトリスタックにpushd
