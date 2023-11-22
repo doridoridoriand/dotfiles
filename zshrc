@@ -118,8 +118,8 @@ case ${OSTYPE} in
     ;;
 esac
 
-# asdf
-. $HOME/.asdf/asdf.sh
+## asdf
+#. $HOME/.asdf/asdf.sh
 
 # つーかzshrcきったね
 
