@@ -2,7 +2,8 @@
 ## Targets
 - git
 - tmux
-- vim (>= 8.x)
+- Vim (>= 8.x)
+- NeoVim
 - zsh
 
 ## Installation
@@ -16,4 +17,3 @@ git clone https://github.com/doridoridoriand/dotfiles.git
 cd dotfiles
 ./setup.sh
 ```
-
