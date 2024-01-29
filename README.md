@@ -3,7 +3,7 @@
 - git
 - tmux
 - Vim (>= 8.x)
-- NeoVim
+- NeoVim (>= 0.9.x)
 - zsh
 
 ## Installation
