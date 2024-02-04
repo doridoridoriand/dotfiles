@@ -139,6 +139,7 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH" >> ~/.zshrc
 source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
+# krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Generated for envman. Do not edit.
