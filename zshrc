@@ -88,9 +88,6 @@ eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# OpenCV関連
-export PATH="/usr/local/opt/opencv3/bin:$PATH"
-
 # GOPATH, GOROOT(Mac)
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
@@ -99,18 +96,16 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 export GOENV_DISABLE_GOPATH=1
 eval "$(goenv init -)"
 
-export CPPFLAGS="-I/usr/local/opt/qt5/include"
-export LDFLAGS="-L/usr/local/opt/qt5/lib"
-export PATH=/usr/local/opt/qt5/bin:$PATH
-
 # Rust
 #source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
 
 case ${OSTYPE} in
   darwin*)
+    export PATH="/usr/local/opt/opencv3/bin:$PATH"
     export LDFLAGS="-L/usr/local/opt/readline/lib";
     export CPPFLAGS="-I/usr/local/opt/readline/include";
+    export PATH=/usr/local/opt/qt5/bin:$PATH
     export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig";
     ;;
   linux*)
@@ -129,12 +124,12 @@ case ${OSTYPE} in
     export LDFLAGS="-L/usr/local/opt/mysql-client/lib";
     export CPPFLAGS="-I/usr/local/opt/mysql-client/include";
     export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig";
+    export PATH="/opt/homebrew/opt/libpq/bin:$PATH";
+    export PATH="/usr/local/opt/mysql-client/bin:$PATH";
     ;;
   linux*)
     ;;
 esac
-
-export PATH="/usr/local/opt/mysql-client/bin:$PATH" >> ~/.zshrc
 
 source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
