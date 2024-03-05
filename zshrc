@@ -124,8 +124,8 @@ case ${OSTYPE} in
     export LDFLAGS="-L/usr/local/opt/mysql-client/lib";
     export CPPFLAGS="-I/usr/local/opt/mysql-client/include";
     export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig";
-    export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-    export PATH="/usr/local/opt/mysql-client/bin:$PATH" >> ~/.zshrc
+    export PATH="/opt/homebrew/opt/libpq/bin:$PATH";
+    export PATH="/usr/local/opt/mysql-client/bin:$PATH";
     ;;
   linux*)
     ;;
