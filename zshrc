@@ -103,7 +103,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 case ${OSTYPE} in
   darwin*)
     export PATH="/usr/local/opt/opencv3/bin:$PATH"
-    export LDFLAGS="-L/usr/local/opt/readline/lib";
+    #export LDFLAGS="-L/usr/local/opt/readline/lib";
     export CPPFLAGS="-I/usr/local/opt/readline/include";
     export PATH=/usr/local/opt/qt5/bin:$PATH
     export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig";
@@ -121,7 +121,7 @@ esac
 case ${OSTYPE} in
   darwin*)
     export PATH="/usr/local/opt/mysql-client/bin:$PATH";
-    export LDFLAGS="-L/usr/local/opt/mysql-client/lib";
+    #export LDFLAGS="-L/usr/local/opt/mysql-client/lib";
     export CPPFLAGS="-I/usr/local/opt/mysql-client/include";
     export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig";
     export PATH="/opt/homebrew/opt/libpq/bin:$PATH";
@@ -130,6 +130,8 @@ case ${OSTYPE} in
   linux*)
     ;;
 esac
+
+export LDFLAGS="-s -w";
 
 source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
