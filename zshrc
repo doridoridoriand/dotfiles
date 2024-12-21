@@ -148,4 +148,8 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
-export PATH="$PATH:$HOME/flutter/bin"
+#export PATH="$PATH:$HOME/flutter/bin"
+export GOPRIVATE="github.com/doridoridoriand/"
+
+# Created by `pipx` on 2024-10-19 04:47:13
+export PATH="$PATH:$HOME/.local/bin"
