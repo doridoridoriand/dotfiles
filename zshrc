@@ -8,6 +8,7 @@ source ~/dotfiles/zshrc.kubebuilder
 source ~/dotfiles-extra/zshrc.cycloud
 source ~/dotfiles-extra/zshrc.extra.commands
 source ~/dotfiles-extra/zshrc.private.servers
+source ~/dotfiles-extra/zshrc.extra.config
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
@@ -126,12 +127,15 @@ case ${OSTYPE} in
     export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig";
     export PATH="/opt/homebrew/opt/libpq/bin:$PATH";
     export PATH="/usr/local/opt/mysql-client/bin:$PATH";
+    # namespace.so client
+    export NS_ROOT="$HOME/Library/Application Support/ns"
+    export PATH="$NS_ROOT/bin:$PATH"
     ;;
   linux*)
     ;;
 esac
 
-export LDFLAGS="-s -w";
+#export LDFLAGS="-s -w";
 
 source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
@@ -150,8 +154,10 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 
 # export PATH="$PATH:$HOME/flutter/bin"
 
-# Configure Go to bypass proxy for private repositories
- export GOPRIVATE="github.com/doridoridoriand/"
-
-# User-installed binaries (pipx packages)
 export PATH="$HOME/.local/bin:$PATH"  # Prepend to give precedence over system binaries
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
