@@ -12,3 +12,5 @@ peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+alias flush-dns='sudo killall -HUP mDNSResponder'
