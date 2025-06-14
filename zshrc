@@ -1,14 +1,14 @@
 #  設定読み込み
-source ~/dotfiles/zshrc.basic_config
-source ~/dotfiles/zshrc.alias
-source ~/dotfiles/zshrc.completion
-source ~/dotfiles/zshrc.extra.commands
+source ~/dotfiles/zshrc.basic_config.sh
+source ~/dotfiles/zshrc.alias.sh
+source ~/dotfiles/zshrc.completion.sh
+source ~/dotfiles/zshrc.extra.commands.sh
 source <(kubectl completion zsh)
-source ~/dotfiles/zshrc.kubebuilder
-source ~/dotfiles-extra/zshrc.cycloud
-source ~/dotfiles-extra/zshrc.extra.commands
-source ~/dotfiles-extra/zshrc.private.servers
-source ~/dotfiles-extra/zshrc.extra.config
+source ~/dotfiles/zshrc.kubebuilder.sh
+source ~/dotfiles-extra/zshrc.cycloud.sh
+source ~/dotfiles-extra/zshrc.extra.commands.sh
+source ~/dotfiles-extra/zshrc.private.servers.sh
+source ~/dotfiles-extra/zshrc.extra.config.sh
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info

@@ -13,4 +13,6 @@ peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-alias flush-dns='sudo killall -HUP mDNSResponder'
+if [[ "$(uname)" == "Darwin" ]]; then
+  alias flush-dns='sudo killall -HUP mDNSResponder'
+fi
