@@ -31,6 +31,9 @@ alias docker-rmi-all='sudo docker rmi $(sudo docker images --format "{{.Reposito
 # Kubernetes
 alias k='kubectl'
 
+# kubectl-ai
+alias kai='kubectl-ai'
+
 # Multipass
 alias mlp='multipass'
 
