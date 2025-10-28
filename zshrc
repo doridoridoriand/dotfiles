@@ -1,14 +1,27 @@
+# 重複読み込み防止（同一シェルプロセス内でのみ）
+# tmux環境では各ペイン/ウィンドウが独立したプロセスなので、
+# プロセスIDベースで重複チェックを行う
+if [[ -n "$ZSHRC_LOADED_PID" && "$ZSHRC_LOADED_PID" == "$$" ]]; then
+  return
+fi
+export ZSHRC_LOADED_PID=$$
+
 #  設定読み込み
 source ~/dotfiles/zshrc.basic_config.sh
 source ~/dotfiles/zshrc.alias.sh
 source ~/dotfiles/zshrc.completion.sh
 source ~/dotfiles/zshrc.extra.commands.sh
-source <(kubectl completion zsh)
+# kubectl completion（kubectlが利用可能な場合のみ）
+if command -v kubectl >/dev/null 2>&1; then
+  source <(kubectl completion zsh)
+fi
 source ~/dotfiles/zshrc.kubebuilder.sh
-source ~/dotfiles-extra/zshrc.cycloud.sh
-source ~/dotfiles-extra/zshrc.extra.commands.sh
-source ~/dotfiles-extra/zshrc.private.servers.sh
-source ~/dotfiles-extra/zshrc.extra.config.sh
+
+# 外部設定ファイル（存在する場合のみ読み込み）
+[[ -f ~/dotfiles-extra/zshrc.cycloud.sh ]] && source ~/dotfiles-extra/zshrc.cycloud.sh
+[[ -f ~/dotfiles-extra/zshrc.extra.commands.sh ]] && source ~/dotfiles-extra/zshrc.extra.commands.sh
+[[ -f ~/dotfiles-extra/zshrc.private.servers.sh ]] && source ~/dotfiles-extra/zshrc.private.servers.sh
+[[ -f ~/dotfiles-extra/zshrc.extra.config.sh ]] && source ~/dotfiles-extra/zshrc.extra.config.sh
 
 # VCSのブランチ名をプロンプトに表示
 autoload -Uz vcs_info
@@ -66,9 +79,9 @@ man() {
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/local/bin:$PATH"
 if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
@@ -81,11 +94,8 @@ fi
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
-if [ -e /usr/local/share/zsh-completions ]; then
-  fpath=(/usr/local/share/zsh-completions $fpath)
-fi
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# rbenv initialization moved to earlier section to avoid duplication
+# zsh-completions setup moved to compinit section to avoid duplication
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -156,10 +166,19 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 
 export PATH="$HOME/.local/bin:$PATH"  # Prepend to give precedence over system binaries
 
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=($HOME/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
+# 追加の補完設定（既にcompinit実行済みの場合）
+if [[ -n "$COMPINIT_LOADED_PID" && "$COMPINIT_LOADED_PID" == "$$" ]]; then
+  # Docker CLI completions
+  [[ -d $HOME/.docker/completions ]] && fpath=($HOME/.docker/completions $fpath)
+  
+  # zsh-completions
+  if [ -e /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+  fi
+  
+  # 追加設定後に補完システムを再初期化
+  autoload -Uz compinit
+  compinit
+fi
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
