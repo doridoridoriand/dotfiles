@@ -1,5 +1,5 @@
 # 補完
-autoload -U compinit; compinit  # 補完機能を有効にする
+# Note: compinit is called in main zshrc to avoid duplication
 setopt auto_list                # 補完候補を一覧で表示する
 setopt auto_menu                # 補完キー連打で補完候補を順に表示する
 setopt auto_param_keys          # 括弧などを自動的に補完
@@ -16,6 +16,11 @@ setopt nolistbeep               # 補完表示時にビープ音を鳴らさな�
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 大文字小文字を区別しない
 
 # 補完をハイライトする
-autoload -U compinit
-compinit
+# compinit実行（プロセス単位での重複防止）
+if [[ -z "$COMPINIT_LOADED_PID" || "$COMPINIT_LOADED_PID" != "$$" ]]; then
+  autoload -U compinit
+  compinit
+  export COMPINIT_LOADED_PID=$$
+fi
+
 zstyle ':completion:*:default' menu select=2
