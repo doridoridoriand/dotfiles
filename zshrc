@@ -131,7 +131,8 @@ esac
 
 case ${OSTYPE} in
   darwin*)
-    export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
+    #export PATH="/opt/homebrew/opt/mysql-client@8.0/bin:$PATH"
+    export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
     #export LDFLAGS="-L/usr/local/opt/mysql-client/lib";
     export CPPFLAGS="-I/usr/local/opt/mysql-client/include";
     export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig";
