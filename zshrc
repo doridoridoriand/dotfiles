@@ -99,13 +99,15 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# GOPATH, GOROOT(Mac)
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+# Go環境設定 (goenv + Go Modules)
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
-export GOENV_DISABLE_GOPATH=1
 eval "$(goenv init -)"
+
+# Go Modules使用時のデフォルト設定
+# GOPATH は Go Modules プロジェクト外でのみ使用される
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # Rust
 #source $HOME/.cargo/env
