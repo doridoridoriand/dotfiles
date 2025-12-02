@@ -129,8 +129,6 @@ esac
 ## asdf
 #. $HOME/.asdf/asdf.sh
 
-# つーかzshrcきったね
-
 case ${OSTYPE} in
   darwin*)
     export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
@@ -146,8 +144,6 @@ case ${OSTYPE} in
   linux*)
     ;;
 esac
-
-#export LDFLAGS="-s -w";
 
 source "$HOME/kube-ps1/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
@@ -184,3 +180,11 @@ if [[ -n "$COMPINIT_LOADED_PID" && "$COMPINIT_LOADED_PID" == "$$" ]]; then
 fi
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
