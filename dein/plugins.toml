@@ -20,9 +20,6 @@ repo = 'Shougo/vimproc.vim'
 repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
-repo = 'ujihisa/unite-colorscheme'     # カラースキーマをアドホックに変えたい
-
-[[plugins]]
 repo = 'w0rp/ale'                      # syntaxチェックをしてくれる(対応言語めっちゃ大量)
 
 [[plugins]]
@@ -45,9 +42,6 @@ repo = 'vim-scripts/YankRing.vim'      # ヤンクの履歴を参照可能にす
 
 [[plugins]]
 repo = 'google/vim-maktaba'            # bazelプラグインで必要だったのでインストール
-
-[[plugins]]
-repo = 'pocke/sushibar.vim'            # 寿司を流す
 
 [[plugins]]
 repo = 'github/copilot.vim'            # GitHub Copilot

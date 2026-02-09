@@ -23,6 +23,12 @@ if dein#load_state('~/.cache/dein')
  call dein#add('~/.cache/dein')
  call dein#end()
  call dein#save_state()
+
+ let s:removed_plugins = dein#check_clean()
+ if len(s:removed_plugins) > 0
+  call map(s:removed_plugins, { _, val -> delete(val, 'rf') })
+  call dein#recache_runtimepath()
+ endif
 endif
 
 " Install plugins if you add later

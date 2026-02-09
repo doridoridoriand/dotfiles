@@ -1,3 +1,6 @@
+" Python3 provider (pyenv)
+let g:python3_host_prog = expand('~/.pyenv/versions/3.12.12/bin/python3')
+
 " Dein
 source ~/dotfiles/nvim_config/dein.vim
 
@@ -28,4 +31,3 @@ source ~/dotfiles/nvim_config/search.vim
 
 " プラグイン設定
 source ~/dotfiles/nvim_config/plugin_settings.vim
-
