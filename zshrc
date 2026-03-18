@@ -75,10 +75,6 @@ man() {
         man "$@"
 }
 
-# phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
-
 export PATH="$HOME/local/bin:$PATH"
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
@@ -188,3 +184,9 @@ compinit
 
 # Added by Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.2/sbin:$PATH"
+
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
