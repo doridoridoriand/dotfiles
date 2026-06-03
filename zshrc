@@ -76,13 +76,17 @@ man() {
 }
 
 export PATH="$HOME/local/bin:$PATH"
-if [ -d "$HOME/.rbenv" ]; then
+if [ -x "/opt/homebrew/bin/rbenv" ]; then
+  eval "$(/opt/homebrew/bin/rbenv init - zsh)"
+elif [ -x "/usr/local/bin/rbenv" ]; then
+  eval "$(/usr/local/bin/rbenv init - zsh)"
+elif [ -x "$HOME/.rbenv/bin/rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
+  eval "$("$HOME/.rbenv/bin/rbenv" init - zsh)"
 fi
 
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
+eval "$(pyenv init --path --no-rehash)"
 
 if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
   source ~/perl5/perlbrew/etc/bashrc
@@ -97,6 +101,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Go環境設定 (goenv + Go Modules)
 export GOENV_ROOT="$HOME/.goenv"
+export GOENV_DISABLE_GOROOT=1
+unset GOROOT
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 
