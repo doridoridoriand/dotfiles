@@ -75,6 +75,11 @@ man() {
         man "$@"
 }
 
+if [ -x "$HOME/.phpenv/bin/phpenv" ]; then
+  export PATH="$HOME/.phpenv/bin:$PATH"
+  eval "$("$HOME/.phpenv/bin/phpenv" init - zsh)"
+fi
+
 export PATH="$HOME/local/bin:$PATH"
 if [ -x "/opt/homebrew/bin/rbenv" ]; then
   eval "$(/opt/homebrew/bin/rbenv init - zsh)"
@@ -83,10 +88,16 @@ elif [ -x "/usr/local/bin/rbenv" ]; then
 elif [ -x "$HOME/.rbenv/bin/rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$("$HOME/.rbenv/bin/rbenv" init - zsh)"
+elif [ -d "$HOME/.rbenv" ] && command -v rbenv >/dev/null 2>&1; then
+  eval "$(RBENV_ROOT="$HOME/.rbenv" rbenv init - zsh)"
 fi
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path --no-rehash)"
+if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+fi
+if command -v pyenv >/dev/null 2>&1; then
+  eval "$(pyenv init --path --no-rehash)"
+fi
 
 if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
   source ~/perl5/perlbrew/etc/bashrc
@@ -103,8 +114,12 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export GOENV_ROOT="$HOME/.goenv"
 export GOENV_DISABLE_GOROOT=1
 unset GOROOT
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+if [ -x "$GOENV_ROOT/bin/goenv" ]; then
+  export PATH="$GOENV_ROOT/bin:$PATH"
+fi
+if command -v goenv >/dev/null 2>&1; then
+  eval "$(goenv init -)"
+fi
 
 # Go Modules使用時のデフォルト設定
 # GOPATH は Go Modules プロジェクト外でのみ使用される
