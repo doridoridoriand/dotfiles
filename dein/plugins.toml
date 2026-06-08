@@ -48,3 +48,4 @@ repo = 'github/copilot.vim'            # GitHub Copilot
 
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'         # LSP
+rev = 'v1.8.0'                         # nvim 0.9 compatible
