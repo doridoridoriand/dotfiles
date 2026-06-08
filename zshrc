@@ -96,7 +96,7 @@ if [ -x "$HOME/.pyenv/bin/pyenv" ]; then
   export PATH="$HOME/.pyenv/bin:$PATH"
 fi
 if command -v pyenv >/dev/null 2>&1; then
-  eval "$(pyenv init --path --no-rehash)"
+  eval "$(pyenv init - --no-rehash zsh)"
 fi
 
 if [ -e "~/perl5/perlbrew/etc/bashrc" ]; then
@@ -111,14 +111,17 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Go環境設定 (goenv + Go Modules)
-export GOENV_ROOT="$HOME/.goenv"
-export GOENV_DISABLE_GOROOT=1
-unset GOROOT
-if [ -x "$GOENV_ROOT/bin/goenv" ]; then
+if [ -x "$HOME/.goenv/bin/goenv" ]; then
+  export GOENV_ROOT="$HOME/.goenv"
+  export GOENV_DISABLE_GOROOT=1
+  unset GOROOT
   export PATH="$GOENV_ROOT/bin:$PATH"
-fi
-if command -v goenv >/dev/null 2>&1; then
-  eval "$(goenv init -)"
+  eval "$("$GOENV_ROOT/bin/goenv" init - zsh)"
+elif command -v goenv >/dev/null 2>&1; then
+  export GOENV_ROOT="${GOENV_ROOT:-$HOME/.goenv}"
+  export GOENV_DISABLE_GOROOT=1
+  unset GOROOT
+  eval "$(goenv init - zsh)"
 fi
 
 # Go Modules使用時のデフォルト設定
