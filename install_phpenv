@@ -1,7 +1,28 @@
 #!/usr/bin/env zsh
 
-git clone https://github.com/phpenv/phpenv.git ~/.phpenv
-git clone https://github.com/php-build/php-build.git $HOME/.phpenv/plugins/php-build
+append_line_once() {
+  local file="$1"
+  local line="$2"
 
-echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/.profile
-echo 'eval "$(phpenv init -)"' >> ~/.profile
+  touch "$file"
+  grep -qxF -- "$line" "$file" || print -r -- "$line" >> "$file"
+}
+
+git clone https://github.com/phpenv/phpenv.git "$HOME/.phpenv"
+git clone https://github.com/php-build/php-build.git "$HOME/.phpenv/plugins/php-build"
+
+startup_files=( "$HOME/.profile" )
+case "${SHELL:-}" in
+  *zsh) startup_files+=( "$HOME/.zshrc" ) ;;
+esac
+
+phpenv_init_lines=(
+  'export PATH="$HOME/.phpenv/bin:$PATH"'
+  'eval "$(phpenv init -)"'
+)
+
+for startup_file in "${startup_files[@]}"; do
+  for init_line in "${phpenv_init_lines[@]}"; do
+    append_line_once "$startup_file" "$init_line"
+  done
+done
